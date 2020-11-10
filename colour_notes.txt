@@ -1,0 +1,6 @@
+OETF - converts NITS to normalized PQ space
+EOTF - converts normalized PQ space to NITS
+
+log_decoding - log to linearLight
+log_encoding - linearLight to log
+
