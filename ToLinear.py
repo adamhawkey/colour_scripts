@@ -1,17 +1,18 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import colour
+import numpy
 from colour.utilities.verbose import message_box
 
 message_box('Colour Component Transfer Functions (CCTF) Computations')
-
-C = 18 / 100
+C = int((input("Enter a % value: "))
+C = C/100
 
 message_box(('Encoding to video component signal value using "BT.709" OETF '
              'and given linear-light value:\n'
              '\n\t{0}'.format(C)))
-print(colour.oetf_BT709(C))
+print(colour.models.oetf_BT709(C))
 print(colour.oetf(C, function='BT.709'))
 
 print('\n')
