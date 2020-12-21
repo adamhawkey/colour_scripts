@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
 # script to enter a 10 bit code value and return the corresponding NITS value in PQ space
-# "A Perceptual EOTF for Extended Dynamic Range Imagery"
+# maths from "A Perceptual EOTF for Extended Dynamic Range Imagery" 
+# and SMPTE ST_2084:2014
 
 bit10 = int(input("Enter a 10 bit code value: "))
 N = bit10/(2**10-1)  #instead of dividing by 1023, using 2^10-1 instead.
 
 '''
-# original calculations in 2015
+# original calculations in 2014
 m1 = (2610/4096)/4
 m2 = (2523/4096)*128
 c1 = 3424/4096
